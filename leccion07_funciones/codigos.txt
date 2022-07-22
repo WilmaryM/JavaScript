@@ -1,0 +1,101 @@
+//hoisting
+miFuncion(4, 5)
+
+//declaracion
+function miFuncion (a, b){
+    console.log(arguments.length);
+  //return en javascript
+   return a + b; }
+
+-------------------------------------------------------
+//llamnado una funcion
+let resultado =  miFuncion( 2, 3);
+console.log(resultado);
+
+Suma: 9 ​​​​​at ​​​​​​​​'Suma: ' + (a + b)​​​ ​07-01-funcionesjs.js:5:5​
+
+Suma: 5 ​​​​​at ​​​​​​​​'Suma: ' + (a + b)​​​ ​07-01-funcionesjs.js:5:5
+
+​
+-----------------------------------------------------
+//funcion tipo Self Invoking
+(function (a, b){
+    console.log("Ejecutando la funcion: " + (a + b) );
+})(3, 4);
+
+-----------------------------------------
+//Funcion con Objetos
+console.log(typeof miFuncion);
+
+var miFuncionTexto = miFuncion.toString();
+console.log(miFuncionTexto);
+
+--------------------------------------------
+//declaracion de funcion tipo expresion
+let sumar = function (a, b){return a + b;}
+
+resultado = sumar (1, 2);
+console.log(resultado);
+
+------------------------------------------
+//Funcion tipo Flecha(
+const sumarFuncionTipoFlecha = (a, b) => a + b;
+resultado = sumarFuncionTipoFlecha (3, 5);
+console.log(resultado);
+
+----------------------------------------------
+//declaracion de funcion tipo expresion
+let sumar = function (a = 4, b = 5 ){
+    console.log(arguments[0]);
+    console.log( arguments[1]);
+    console.log(arguments[2]);
+    return a + b + arguments[2];
+}
+//los numeros que escribimos aqui se sobreescribe
+resultado = sumar (3, 6, 7);
+console.log(resultado);
+
+
+
+----------------------------------------
+//ejemplo de suma de todos los argumentos
+let resutado = sumarTodo(5 ,4 ,13 ,10 ,9);
+console.log(resutado);
+
+function sumarTodo(){
+    let suma = 0;
+    for(let i = 0; i < arguments.length; i ++){
+        suma += arguments[i]; // suma = suma + arguments[i]
+       }
+    return suma;
+}
+
+
+---------------------------
+//tipos primitivos
+let x = 10;
+
+//la varriable a fuera de la funcion no existe
+function cambiarValor(a){
+    a = 20;
+}
+
+//paso por valor
+cambiarValor(x);//10
+console.log(x);
+//console.log(a);
+
+----------------------------------------------
+const persona ={
+    nombre: 'Juan',
+    apellido: 'Perez'
+}
+
+function cambiarValorObjeto(p1){
+    p1.nombre = 'Carlos';
+    p1.apellido = 'Lara';
+}
+
+//paso por referencia 
+cambiarValorObjeto(persona);
+console.log(persona);{ nombre: 'Carlos', apellido: 'Lara' }

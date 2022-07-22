@@ -1,0 +1,119 @@
+//Tipos de datos string
+var nombre = "Carlos";
+console.log(nombre);
+
+nombre=10.5;
+console.log(typeof nombre);
+
+//tipo de dtaos numerico
+var numero = 1000;
+console.log(typeof numero)
+
+//tipo de datos object
+var object ={
+    nombre: "Juan", 
+    apellido: "Perez",
+    telefono: "24653463"
+}
+console.log(typeof object)
+
+//tipo de dato boolean (True, False)
+var bandera = false;
+console.log(typeof bandera);
+
+//tipo de dqato fumction
+function mifuncion(){}
+console.log(typeof mifuncion)
+
+//tipo de dato Symbol
+
+var simbolo = Symbol("mi simbolo");
+console.log(typeof simbolo)
+
+//tipo de clase es una function
+class Persona{
+    constructor(nombre, apellido){
+        this.nombre = nombre;
+        this.apellido = apellido;
+    }
+}
+console.log(typeof Persona);
+
+//tipod e dato undefine
+var x;
+console.log(typeof x);
+x=undefined
+console.log(x);
+
+//null aucencia del valr
+var y = null;
+console.log(typeof y);
+
+var auto = ['BMW, Audi, Volvo']
+console.log(auto);
+console.log(typeof auto);
+
+var z= ''
+console.log(z);
+console.log(typeof z);
+
+
+
+//concatenacion de cadena
+
+var nombre = "Juan";
+var apelllido = "Perez";
+
+var nombrecompleto = nombre + ' ' + apelllido;
+console.log(nombrecompleto); Juan Perez
+
+var nombrecompleto2 = "Carlos" + ' ' + "Lara"
+console.log(nombrecompleto2); Carlos Lara
+
+var x = nombre + 2 + 1
+console.log(x); Juan21
+
+x = nombre + (2 + 1);
+console.log(x); Juan3
+
+x= 2+ 1 + nombre
+console.log(x);3juan
+
+/*
+Para definir variales que se puden cambiar usamos (let)
+y para el caso contrario de no reemplazar usamos (const)
+*/
+
+let nombre;
+nombre = "Juan";
+console.log(nombre);
+
+
+const apellido= "Perez";
+//apellido= "Lara";  Error no se puede camabiar el valor de la variante
+
+
+//si quermos que esta variable se vea claramente pero son
+ dos palabras necesitamos poner la primer letra de la segunda palabra en mayuscula
+
+"let nombreCompleto"
+let nombreCompleto = "Juan Perez"
+console.log( nombreCompleto ); Juan Perez.
+
+
+let x, y; 
+x = 10, y = 20;
+let z = x + y;
+console.log(z); 30
+
+let  1nombreCompleto; incorrecto no esta permitido iniciar el nombre de una variable con numeros
+
+de esta manera se escriben las variales
+let _nombrre; correcto
+let $nombre; correcto
+let $1nombreCompleto; correcto
+
+Tambien en el caso de las funciones ya agregadas a javascript no pdemos usar sus nombres por que nos da error 
+
+
+

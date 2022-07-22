@@ -1,0 +1,275 @@
+let a = 3, b = 2;
+
+let z = a + b;
+console.log( "Resultado de la suma:" + z );
+
+z = a - b;
+console.log("Resultado de la resta: " + z);
+
+z = a * b;
+console.log( "Resultado de la multiplicacion" + z);
+
+z = a / b;
+console.log(  `Resultado de la division:` + z );
+
+z = a % b;
+console.log( "Resultado de opeacion modulo:" + z);
+
+z = a ** b;
+console.log( "Resultado del opeador exponente:" + z);
+
+
+Resultado de la suma:5 
+  ​​​​​at ​​​​​​​​'Resultado de la suma:' + z​​​ ​03-01-operadoresjavascript.js:3:1​
+ 
+Resultado de la resta: 1 
+  ​​​​​at ​​​​​​​​'Resultado de la resta: ' + z​​​ ​03-01-operadoresjavascript.js:6:1​
+ 
+Resultado de la multiplicacion6 
+  ​​​​​at ​​​​​​​​'Resultado de la multiplicacion' + z​​​ ​03-01-operadoresjavascript.js:9:1​
+ 
+Resultado de la division:1.5 
+  ​​​​​at ​​​​​​​​`Resultado de la division:` + z​​​ ​03-01-operadoresjavascript.js:12:1​
+ 
+Resultado de opeacion modulo:1 
+  ​​​​​at ​​​​​​​​'Resultado de opeacion modulo:' + z​​​ ​03-01-operadoresjavascript.js:15:1​
+ 
+Resultado del opeador exponente:9 
+  ​​​​​at ​​​​​​​​'Resultado del opeador exponente:' + z​​​ ​03-01-operadoresjavascript.js:18:1​
+
+
+
+
+let a = 3, b = 2;
+let z = a + b;
+
+//incremento
+//Pre-incremnto (el operador ++ antes de la variable)
+
+z = ++a;
+console.log(a);
+console.log(z)
+
+//Post-incremento (el operador ++ despues de la variable)
+z = b++;
+console.log(b);
+console.log(z);
+
+//descremento
+//predecremento
+z = --a;
+console.log(a);
+console.log(z);
+
+//postdecremento
+
+z = b--;
+console.log(b);
+console.log(z);
+
+
+
+
+
+
+let a = 3, b = 2, c =1, d = 4;
+
+
+/* las operaciones trabajan de izquierda a derecha, sin embargo hay operaciones-
+que tienen prioridad como es el caso de la multiplicacion y division.*/
+
+let z = a * b + c / d;
+console.log(z);
+
+z = c + a * b /d;
+console.log(z);
+
+/*Tambien hay otras operaciones que si estan en parentesis apesar de que haya otras de mayor prioridad si 
+estan entre (se haran primero) y luego las demas siempre de izquierda a derecha */
+z = (c + a) * b / c;
+console.log(z);
+
+
+
+
+let a =9;
+
+a += 3;//a = a + 3
+console.log(a);12 ​​​​​at ​​​​​​​​a​​​ ​03-01-operadoresjavascript.js:4:1​
+
+a -=2; //a = a - 2
+console.log(a); 10 ​​​​​at ​​​​​​​​a​​​ ​03-01-operadoresjavascript.js:7:1​
+
+a *= 5; // a = a * 5
+console.log(a); 50 ​​​​​at ​​​​​​​​a​​​ ​03-01-operadoresjavascript.js:10:1​
+
+a /= 3; // a = a / 3
+console.log(a); 16.666666666666668 ​​​​​at ​​​​​​​​a​​​ ​03-01-operadoresjavascript.js:13:1​
+
+
+a %= 6; // a = % 6
+console.log(a);4.666666666666668 ​​​​​at ​​​​​​​​a​​​ ​03-01-operadoresjavascript.js:16:1​
+
+
+a **= 7; // a = ** 7
+console.log(a); 48200.04755372665 ​​​​​at ​​​​​​​​a​​​ ​03-01-operadoresjavascript.js:19:1​
+
+
+
+let a = 3, b=2, c= "3";
+
+//cuando comparamos usamos dos ==. Se revisa elvalor sin importar el tipo
+let z = a == b;
+console.log(z); false
+
+z = a ===c;// se usa === para revisar el valor y el tipo, aqui aunque los valores son iguales no son de un mismo tipo
+console.log(z); false
+
+z = a==c;
+console.log(z); true
+
+// aqui se pregunta si son diferentes
+let z = a != b;
+console.log(z);true
+
+//aqui hace la pregunta de si son difrentes
+z = a !==c;
+console.log(z); true
+
+
+
+
+
+
+
+
+
+let a = 3, b=3, c= "3";
+
+//operador menor (<)
+let z = a < b;
+console.log(z); false
+
+// operador menor e igual(<=)
+z = a <= b;
+console.log(z); true
+
+z = a>b;
+console.log(z); false
+
+z = a>=b ;
+console.log(z); true
+
+maneras de preguntar 
+let a = 80;
+ 
+if ( a % 2 == 0){
+    console.log("Es un número par");
+}
+
+else{
+    console.log("Es un número impar");
+}
+
+cuando queremos saaber la edad:
+
+let edad = 18, adulto = 18;
+
+if(edad >= adulto){
+    console.log("Es un adulto");
+}
+
+else{
+    console.log("Es menor de edad");
+}
+
+
+
+Operador logico AND (&&), regresaa true si ambos son true
+
+
+let a = 5;
+let valMin = 0, valMax =10;
+
+if ( a >= valMin && a <= valMax){
+    console.log("Dentro de rango"); Dentro de rango
+}
+
+else{
+    console.log("Fuera de rango");
+}
+
+
+// ejempo de or (||), regresa true si cualquier operando es true
+let vacaciones = false, diadescanso = true;
+
+if ( vacaciones || diadescanso){
+    console.log("Padre puede asistir al juego del hijo"); Padre puede asistir al juego del hijo 
+}
+
+else{
+    console.log("El padre esta ocupado");
+}
+
+Operador ternario
+
+let resultado = (1 > 2)? "Verdadero" : "Falso";
+console.log(resultado); falso
+
+let numero = 110;
+resultado = (numero % 2 == 0) ? "Nuemro par": "Nuemro impar";
+console.log(resultado)Nuemro par ​​​​​
+
+
+
+let miNumero = "18";
+// console.log(typeof miNumero) string
+
+let edad = Number(miNumero);
+// console.log(typeof edad) number
+
+
+if (edad >= 18){
+    console.log("Puede votar");
+}
+else{
+    console.log("Muy joven para votar")
+}
+
+//manera mas corta
+let resultado = (edad >= 18) ? "Puede votar": "Muy joven para votar";
+console.log(resultado)
+
+
+
+
+
+isNaN Como saber que trabajs con numeros
+let miNumero = "1";
+
+let edad = Number(miNumero);
+console.log(edad);
+
+if (isNaN(edad)){
+    console.log("No es un mumero")
+}
+
+else{
+    if (edad >= 18){
+        console.log("Puede votar");
+    }
+    else{
+        console.log("Muy joven para votar")
+    }
+}
+
+if (isNaN(edad)){
+    console.log("No es un mumero")
+}
+
+else{
+    //manera mas corta
+let resultado = (edad >= 18) ? "Puede votar": "Muy joven para votar";
+console.log(resultado)
+}
+

@@ -1,0 +1,46 @@
+como definir una variable tipo arreglo:
+
+//let autos = new Array("BMW, Mercedes Benz, Volvo");
+const autos =['BMW', 'Mercedes Benz', 'Volvo']
+console.log(autos);
+
+autos[0];
+
+
+
+
+Como acceder a los elemtos de un arreglo:
+(1)
+console.log(autos[0]);
+console.log(autos[1]);
+console.log(autos[2]);
+
+
+(2)
+for(let i = 0; i < autos.length; i++ ){
+    console.log( i + ': ' + autos[i])
+}
+
+como modificar arreglos:
+
+autos[1] = 'MercedesBenz';
+console.log(autos[1]);
+
+
+como agregar valores:
+autos.push('Audi');
+console.log(autos);
+
+console.log(autos.length);
+autos[autos.length] = 'Cadillac';
+
+console.log(autos)
+
+autos[5]= 'Porshe';
+console.log(autos);
+
+funcion Array (para saber si estamos trabajando en un arreglo):
+(1)
+console.log( Array.isArray(autos));
+(2)
+console.log(autos instanceof Array);

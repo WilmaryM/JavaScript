@@ -1,0 +1,127 @@
+let condicion = false;
+
+
+if (condicion){
+console.log("condicion verdadera");
+}
+
+else{
+console.log("condicion falsa");
+}
+
+ejemlo del if/else en javascript
+let numero = 0;
+
+if ( numero == 1){
+    console.log("Numero uno");
+}
+
+else if ( numero == 2){
+    console.log("Numero dos");
+}
+else if ( numero == 3){
+    console.log("Numero tres");
+}
+else if ( numero == 4){
+    console.log("Numero cuatro");
+}
+
+else{
+    console.log("Numero desconocido")
+}
+
+
+
+
+
+°ejemlo con if/else estaciones del año
+
+let mes = 0;
+let estacion;
+
+
+if (mes == 1 || mes == 2 || mes == 12 ){
+    estacion = "Invierno";
+}
+
+else if( mes == 3 || mes == 4 || mes ==5){
+    estacion ="Primavera";
+}
+
+else if (mes == 6  || mes == 7 || mes == 8){
+    estacion= "Verano";
+}
+
+else if (mes == 9  || mes == 10 || mes == 11){
+    estacion= "Otoño";
+}
+
+else{
+    estacion ="Valor incorrecto";
+}
+
+console.log(estacion);
+
+
+
+
+
+ejemploc con la hora:
+
+let hora = 1;
+let mensaje;
+
+if (hora >= 6 && hora <=11 ){
+    mensaje ="Buenos dias";
+}
+
+else if (hora >=12 && hora <= 18){
+    mensaje = "Buenas tardes";
+}
+
+else if (hora >=19 && hora <= 24){
+    mensaje = "Buenas noches";
+}
+
+else if (hora >=0 && hora < 6){
+    mensaje = "Dormido"
+}
+ 
+else{
+    mensaje = "valor incorecto"
+}
+
+console.log(mensaje);
+
+
+
+
+
+
+switch
+
+let numero = 2;
+
+let numeroTexto = "Valor desconocido";
+
+switch( numero ){
+    case 1:
+            numeroTexto = "Número uno";
+     break;
+    case 2:
+        numeroTexto = "Número dos";
+    break;
+
+    case 3:
+        numeroTexto = "Número tres";
+    break;
+
+    case 4:
+        numeroTexto = "Número cuatro";
+    break;
+
+default:
+    numeroTexto ="Caso no encontrado";
+}
+
+console.log(numeroTexto);

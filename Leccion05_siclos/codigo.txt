@@ -1,0 +1,36 @@
+ciclos en java script
+
+
+let contador =0;
+while(contador < 3){
+    console.log(contador);
+    contador++;
+}
+---------------------------
+do{
+    console.log(contador);
+    contador++
+} while(contador < 3);
+---------------------------------
+for(let contador =0; contador < 3; contador++){
+    console.log(contador);
+}
+console.log("Fin ciclo for");
+
+
+
+
+
+
+palabra breaken un ciclo:
+
+for( let contador =0; contador <= 10; contador++){
+    if( contador %2 ==0 ){
+        console.log(contador);
+    break;//la sentencia break sirve para dar por terminao el ciclo o caso
+}
+
+}
+    
+console.log("FIn del ciclo for")
+
