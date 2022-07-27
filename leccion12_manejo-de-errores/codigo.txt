@@ -1,0 +1,20 @@
+'use strict'
+
+//como reparara un erros o variable que no ha sido declarada
+try{
+
+    let x = 10;
+    //mifuncion();
+    throw 'Mi error'//agregar un error
+}
+catch(error){
+    console.log(error);
+}
+
+//siempre esta en uso, pero es opcional
+finally{
+    console.log('Termina la revicion de errores');
+}
+
+console.log('Continuamos...');
+
