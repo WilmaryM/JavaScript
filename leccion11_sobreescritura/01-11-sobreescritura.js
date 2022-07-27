@@ -35,8 +35,30 @@ class Gerente extends Empleado{
         return `Gerente: ${super.obtenerDetalles()}, depto: ${this._departamento}`;
     }
 }
-let empleado1 = new Empleado('Fabio', 800);
-console.log(empleado1.obtenerDetalles());
 
+//como determinar un tipo
+function determinarTipo(tipo){
+    console.log( tipo.obtenerDetalles() );
+    //polomorfismo o multiples formas.
+    if(tipo instanceof Gerente){
+        //iniciar con las clases de menor gerarquia
+        console.log('Es un objeto de tipo Gerente');
+        console.log(tipo._departamento);
+    }
+
+    else if(tipo instanceof Empleado){
+        console.log( 'Es de tipo Empleado');
+        console.log(tipo._departamento);
+        console.log(tipo._sueldo);
+    }
+
+    else if( tipo instanceof Object){
+        console.log( 'Es tipo object'); 
+    }
+}
+
+let empleado1 = new Empleado('Fabio', 8000);
 let gerente1 = new Gerente('Carlos', 5000,'Sistemas');
-console.log(gerente1.obtenerDetalles());
+
+determinarTipo( empleado1 );
+determinarTipo( gerente1 );
