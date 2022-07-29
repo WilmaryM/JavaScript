@@ -1,0 +1,36 @@
+function mifuncion1(){
+    console.log('Funcion 1');
+}
+
+function mifuncion2(){
+    console.log('Funcion 2');
+}
+
+//las llamadas a nuestras funciones se efectua de manera secuencial.  
+mifuncion1();
+mifuncion2();
+
+
+//Funcion callBack:
+
+function imprimir(mensaje){
+    console.log(mensaje);
+}
+function suma( op1, op2, funcionCallBack){
+    let res = op1 + op2;
+    funcionCallBack(`Resultado: ${res}`);
+}
+
+suma(5,3, imprimir);
+
+//llamadas asíncronas con uso setTimeout
+
+function mifuncionCallBack(){
+    console.log('Saludos asincron despues de 3 seg');
+}
+
+setTimeout(mifuncionCallBack, 3000); //despues de tres segundos
+
+setTimeout(function(){console.log('Saludos asincrono 2')}, 4000);
+
+setTimeout(() => console.log('saludos asincrono 3'), 1000 );
