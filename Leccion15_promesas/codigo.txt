@@ -1,0 +1,18 @@
+let miPromesa = new Promise((resolve, reject)=> {
+    let expresion= false;
+    //let expresion= true;
+    if(expresion)
+    resolve('Resolvio correcto');
+
+    else
+    reject('Se produjo un error');
+});
+
+// miPromesa.then(
+//     valor => console.log(valor),
+//     error => console.log(error)
+// );
+
+// miPromesa
+// .then(valor => console.log(valor))
+// .catch(eror => console.log(eror));
