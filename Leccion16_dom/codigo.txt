@@ -1,0 +1,102 @@
+
+        <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+
+    <title>Ejmplo DOM con JavaScript</title>
+    <style>
+        .azul{
+            color: blue;
+        }
+    </style>
+
+</head>
+<body>
+        <h1 id="cabecero">Ejemplo DOM con JavaScript</h1>
+        <p class="azul">Saludos!</p>
+        <p class="azul">Otro parrafo</p>
+
+    <script>
+
+  let cabecero = document.getElementById('cabecero'); //inner significa interno 
+        console.log(`valor cabecero: ${ cabecero.innerHTML}`);
+        let parrafo = document.getElementById('parrafo'); //para ello inner recuepera el texto que es interno al elemento HTML seleccionado
+        console.log(`valor parrafo:  ${parrafo.innerHTML}`);
+
+        }
+---------------------------------------------------------
+         for(let i=0; i<elemtos.length;i++){
+            console.log(`${i} - ${elemtos[i].innerHTML}`);
+        }
+ ----------------------------------------------------------------
+        parrafo.innerHTML = 'Nuevo valor del parrafo';
+ cabecero.innerHTML = 'CAMBIO DE CABECERO';
+----------------------------------------------
+
+
+    <title>Ejmplo DOM con JavaScript</title>
+    <style>
+        .azul{
+            color: blue;
+        }
+    </style>
+
+</head>
+<body>
+        <h1 class="azul">Ejemplo DOM con JavaScript</h1>
+        <p class="azul">Saludos!</p>
+        <p class="azul">Otro parrafo</p>
+
+    <script>
+        let elementos = document.getElementsByClassName('azul');
+        console.log(`No. elementos: ${elementos.length}`);
+       for(let elemento of elementos){
+        console.log(`${elemento.innerHTML} `);
+       }
+    </script>
+        
+-------------------------------------------------
+
+<h1 class="azul">Ejemplo DOM con JavaScript</h1>
+        <p class="azul">Saludos!</p>
+        <p class="azul">Otro parrafo</p>
+
+    <script>
+        let elementos = document.querySelectorAll('p.azul');// seleccionar los elementos que tienen aplicado cierto estilo css
+        console.log(`No. elementos: ${elementos.length}`);
+       for(let elemento of elementos){
+        console.log(`${elemento.innerHTML} `);
+       }
+    </script>
+
+    --------------------------------------------------------------
+
+    <body>
+       <form id="formulario">
+        Nombre: <input type="text" name="nombre" value="Juan"/>
+        <br>
+        Apellido: <input type="text" name="apellido" value="Perez"/>
+       </form>
+       <button onclick="mostrarValores">Mostrar</button>
+       <!-- Cuando presionamos el botón podemos programar
+            el método on click para que se manda llamar una función
+            de JavaScript.
+       
+        Así que de esta manera, esta función
+        de mostrar valores, ponemos paréntesis 
+        para que se manda a llamar esta función
+        y entonces al momento de dar clic se ejecuta 
+        esta función. -->
+        <script>
+            function mostrarValores(){
+                let formulario = document.forms['formulario'];
+                let texto = '';
+                for( let elemento of formulario){
+                    text += elemento.value + '<br/>';
+                }
+                console.log(texto);
+            }
+        </script>
+</body>
+</html>
