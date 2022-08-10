@@ -98,5 +98,176 @@
                 console.log(texto);
             }
         </script>
+
+        -----------------------------------
+        for( let elemento of formulario){
+                    texto += elemento.value + '<br/>';
+                }
+
+                <title>Ejmplo forulario con JavaScript</title>
+   
+</head>
+<body>
+       <form id="formulario">
+        Nombre: <input type="text" name="nombre" value="Juan"/>
+        <br>
+        Apellido: <input type="text" name="apellido" value="Perez"/>
+       </form>
+       <button onclick="mostrarValores">Mostrar</button>
+
+            <div id="valores"></div>
+        <script>
+            function mostrarValores(){
+                let formulario = document.forms['formulario'];
+                let texto = '';
+                let nommbre = formulario['nombre'];
+                let apellido = formulario['apellido'];
+                texto = nombre.value + '<br/>' + apellido.value;
+                document.getElementById('valores').innerHTML = texto;
+            }
+        </script>
+
+        ------------------------------------------------------------------
+
+            <title>Manejo DOM con JavaScript</title>
+   
+</head>
+<body>
+        <h1 onclick="cambiarTexto(this)">Manejo DOM con JavaScript</h1>
+        <br>
+        <!-- <img id="imagen" src="http://globalmentoring.com.mx/imagenes/javascript.png" alt=""/> -->
+    <script>
+        //document.write('Saludos desde JavaScript');
+        
+        function cambiarTexto(titulo){
+            console.log(titulo);
+            console.log(titulo.innerHTML);
+            titulo.innerHTML = 'Cambiamos el titulo';
+            console.log(titulo.innerHTML);
+
+
+            //document.getElementById('titulo').style.color = 'purple'; //animacion de color
+            //document.getElementById('imagen').src="http://globalmentoring.com.mx/imagenes/html5.png"; 
+            //document.getElementById('titulo').innerHTML += '<br>Nuevo Titulo'; //modificar el contenido
+            //document.write('Adios');
+
+        }
+    </script>
+------------------------------------------------------------------
+
+        <h1 id="titulo">Manejo DOM con JavaScript</h1>
+        <br>
+        <div id="mostrar"></div>
+     <script>
+            document.getElementById('titulo').onclick = cambiarTexto; //funcion callBack
+                //click y mostramos un nuevo contenido
+            function cambiarTexto(){
+                document.getElementById('mostrar').innerHTML = 'Nuevo contenido';
+            }
+
+    </script>
+-------------------------------------------------------------------
+ <!-- metodo onload -->
+
+<body onload="entrar()"> 
+        <h1 id="titulo">Manejo DOM con JavaScript</h1>
+        <br>
+        <div id="mostrar"></div>
+     <script>
+
+     function entrar(){
+        alert('Entrando a la pagina web');
+        let texto = '';
+        if(navigator.cookieEnabled){
+            texto = 'Cookies están habilitadas';
+        }
+        else{texto = 'Cookies están inhabilitadas';
+         }
+         document.getElementById('mostrar').innerHTML = texto;
+     }
+
+    </script>
+------------------------------------------------------------------
+ <!-- metodo onchange -->
+           
+<body> 
+        <h1 id="titulo"  >Manejo DOM con JavaScript</h1>
+        <br>
+        Nombre: <input type="text"  onchange="convertir(this)"/>
+     <script>
+        function convertir(nombreInput){
+            nombreInput.value = nombreInput.value.toUpperCase();
+            //let nombre = document.getElementById('nombre'); otra forma de hacerlo <!-- id ="nombre" -->
+           } 
+
+ ----------------------------------------------------------
+ <!-- metodo onmouseover -->
+           
+<body> 
+        <h1 id="titulo" onmouseover="rojo(this)"  onmouseout="negro(this)">Manejo DOM con JavaScript</h1>
+        <br>
+        Nombre: <input type="text"  onchange="convertir(this)"/>
+     <script>
+        function rojo(titulo){
+            titulo.style.color = 'red';
+        
+        }
+
+        function negro(titulo){
+            titulo.style.color = 'black';
+        }
+
+----------------------------------------------------
+
+ <!-- metodo onmousedown  onmouseup-->
+           
+<body> 
+        <h1 id="titulo" onmousedown="rojo(this)"  onmouseup="azul(this)" onclick="verde(this)">
+        Manejo DOM con JavaScript
+        </h1>
+        <br>
+
+        Nombre: <input type="text"  onchange="convertir(this)"/>
+    
+    <script>
+        function rojo(titulo){
+            console.log('onmousedown cambio a rojo')
+            titulo.style.color = 'red';
+        
+        }
+
+        function azul(titulo){
+            console.log('onmousedown cambio a azul')
+            titulo.style.color = 'blue';
+        }
+
+        function verde(titulo){
+            console.log('click cambio a verde');
+            titulo.style.color = 'green';
+        }
+    </script>
+----------------------------------------------------------------
+ <!-- Eventos onfocus and onblur-->
+           
+<body> 
+
+    <h1 id="titulo"> Manejo DOM con JavaScript</h1>
+    <br>
+    Nombre: <input type="text" onfocus="cambiar(this)" onblur="regresar(this)"/>
+    <br>
+    <br>
+    Apellido: <input type="text" onfocus="cambiar(this)" onblur="regresar(this)"/>
+
+    <script>
+       function cambiar(elementoInput){
+        elementoInput.style.background = 'yellow';
+       }
+
+       function regresar(elementoInput){
+        elementoInput.style.background = 'white';
+       }
+    </script>
+---------------------------------------------------------------
+
 </body>
 </html>

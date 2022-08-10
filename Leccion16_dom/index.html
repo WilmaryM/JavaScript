@@ -3,27 +3,22 @@
 <head>
     <meta charset="UTF-8">
 
-    <title>Ejmplo forulario con JavaScript</title>
+    <title>Manejo DOM con JavaScript</title>
+   
+</head>    <!-- Metodo addEventListener-->
+           
+<body> 
 
-</head>
-<body>
-       <form id="formulario">
-        Nombre: <input type="text" name="nombre" value="Juan"/>
-        <br>
-        Apellido: <input type="text" name="apellido" value="Perez"/>
-       </form>
-       <button onclick="mostrarValores">Mostrar</button>
-       
-            <div id="valores"></div>
-        <script>
-            function mostrarValores(){
-                let formulario = document.forms['formulario'];
-                let texto = '';
-                for( let elemento of formulario){
-                    texto += elemento.value + '<br/>';
-                }
-                document.getElementById('valores').innerHTML = texto;
-            }
-        </script>
+    <h1 id="titulo"> Manejo DOM con JavaScript</h1>
+    <br>
+    Nombre: <input type="text" id="nombre"/>
+    <br>
+    <br>
+    Apellido: <input type="text" id="apellido"/>
+
+    <script>
+      document.getElementById('nombre').add
+    </script>
+
 </body>
 </html>
