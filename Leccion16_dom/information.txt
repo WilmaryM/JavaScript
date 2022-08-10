@@ -1,0 +1,42 @@
+(método) htmlelement.addeventlistener<k extends keyof htmlelementeventmap>
+(type: k, listener: (this: htmlelement, ev: htmlelementventmap[k])
+ => any, options?: boolean | addeventlisteneroptions): void (+1 sobrecarga
+)
+
+agrega un detector de eventos para eventos cuyo valor de atributo de tipo es tipo.
+
+el argumento de devolución de llamada establece la devolución de llamada que se invocará cuando se envíe el evento.
+
+el argumento options establece opciones específicas del oyente. por compatibilidad, esto puede ser un valor booleano,
+ en cuyo caso el método se comporta exactamente como si el valor se hubiera especificado como captura de opciones.
+
+cuando se establece en verdadero, la captura de opciones evita que se invoque la devolución de llamada cuando el valor
+ del atributo eventphase del evento es bubbling_phase. cuando es falso (o no está presente), no se invocará la devolución
+ de llamada cuando el valor del atributo eventphase del evento sea capture_phase. de cualquier manera, se invocará la devolución de llamada si el valor
+ del atributo eventphase del evento es at_target.
+
+cuando se establece en verdadero, el pasivo de las opciones indica que la devolución de llamada no cancelará
+ el evento al invocar preventdefault(). esto se usa para habilitar las optimizaciones de rendimiento descritas
+ en § 2.8 observando detectores de eventos. Cuando se establece en verdadero, las opciones una vez indican que 
+la devolución de llamada solo se invocará una vez, después de lo cual se eliminará el detector de eventos.
+ Si se pasa una señal de cancelación para la señal de opciones, entonces el detector de eventos se eliminará cuando
+ se cancele la señal. El detector de eventos se agrega a la lista de detectores de eventos del objetivo y no se agrega
+ si tiene el mismo tipo, devolución de llamada y captura.
+
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ English
+
+ Español
+(method) htmlelement.addeventlistener<k extends keyof htmlelementeventmap>(type: k, listener: (this: htmlelement, ev: htmlelementeventmap[k]) => any, options?: boolean | addeventlisteneroptions): void (+1 overload
+)
+
+appends an event listener for events whose type attribute value is type. 
+
+the callback argument sets the callback that will be invoked when the event is dispatched.
+
+the options argument sets listener-specific options. for compatibility this can be a boolean, in which case the method behaves exactly as if the value was specified as options's capture.
+
+when set to true, options's capture prevents callback from being invoked when the event's eventphase attribute value is bubbling_phase. when false (or not present), callback will not be invoked when event's eventphase attribute value is capturing_phase. either way, callback will be invoked if event's eventphase attribute value is at_target.
+
+when set to true, options's passive indicates that the callback will not cancel the event by invoking preventdefault(). this is used to enable performance optimizations described in § 2.8 observing event listeners.when set to true, options's once indicates that the callback will only be invoked once after which the event listener will be removed.if an abortsignal is passed for options's signal, then the event listener will be removed when signal is aborted.the event listener is appended to target's event listener list and is not appended if it has the same type, callback, and capture.
