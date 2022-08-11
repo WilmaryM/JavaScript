@@ -5,7 +5,7 @@
 
     <title>Manejo DOM con JavaScript</title>
    
-</head>    <!-- Metodo addEventListener-->
+</head>    <!-- Metodo addEventListener y funcion flecha-->
            
 <body> 
 
@@ -17,19 +17,19 @@
     Apellido: <input type="text" id="apellido"/>
 
     <script>
-      document.getElementById('nombre').addEventListener('focus', cambiar);
-      document.getElementById('nombre').addEventListener('blur', regresar);
-      document.getElementById('apellido').addEventListener('focus', cambiar);
-      document.getElementById('apellido').addEventListener('blur', regresar);
-
-      function cambiar(evento){
-        let componente = evento.target;
-        componente.style.background = 'yellow';
-      }
-
-      function regresar(evento){
-        evento.target.style.background = 'white';
-       }
+      document.getElementById('nombre').addEventListener('focus', (evento)=>{
+        evento.target.style.background = 'pink';
+      } );// el codigo de una funcion flecha no se puede reutlilizar, por eso convien mas utlizar la opcion aterior
+      //ya dependeria del codigo cual utilizar
+      document.getElementById('nombre').addEventListener('blur', (evento)=>{
+        evento.target.style.background = '';
+      });
+      document.getElementById('apellido').addEventListener('focus',(evento)=>{
+        evento.target.style.background = 'pink';
+       } );
+      document.getElementById('apellido').addEventListener('blur', (evento)=>{
+        evento.target.style.background = '';
+      });
 
     </script>
 
