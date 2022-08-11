@@ -5,32 +5,27 @@
 
     <title>Manejo DOM con JavaScript</title>
    
-</head>    <!-- Metodo addEventListener y funcion flecha-->
+</head>    <!-- Delegacion de eventos or useCapture-->
            
 <body> 
 
     <h1 id="titulo"> Manejo DOM con JavaScript</h1>
     <br>
-    Nombre: <input type="text" id="nombre"/>
+    <form id="forma">
+       Nombre: <input type="text" id="nombre"/>
     <br>
     <br>
     Apellido: <input type="text" id="apellido"/>
-
+    </form>
     <script>
-      document.getElementById('nombre').addEventListener('focus', (evento)=>{
-        evento.target.style.background = 'pink';
-      } );// el codigo de una funcion flecha no se puede reutlilizar, por eso convien mas utlizar la opcion aterior
-      //ya dependeria del codigo cual utilizar
-      document.getElementById('nombre').addEventListener('blur', (evento)=>{
-        evento.target.style.background = '';
-      });
-      document.getElementById('apellido').addEventListener('focus',(evento)=>{
-        evento.target.style.background = 'pink';
-       } );
-      document.getElementById('apellido').addEventListener('blur', (evento)=>{
-        evento.target.style.background = '';
-      });
+     const forma = document.getElementById('forma');
 
+      forma.addEventListener('focus', (evento)=>{
+        evento.target.style.background = 'pink';
+      }, true);
+      forma.addEventListener('blur', (evento)=>{
+        evento.target.style.background = '';
+      }, true);
     </script>
 
 </body>
