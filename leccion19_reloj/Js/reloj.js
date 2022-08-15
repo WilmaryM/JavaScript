@@ -12,6 +12,8 @@ const mostrarReloj =()=>{
     let mes = meses[fecha.getMonth()];
     let fechaTexto = `${diasSemana}, ${dia} ${mes}`;
     document.getElementById('fecha').innerHTML = fechaTexto;
+
+    document.getElementById('contenedor').classList.toggle('animar');
 }
 
 const formatoHora = (hora)=>{
