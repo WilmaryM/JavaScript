@@ -1,7 +1,8 @@
 const ingresos = [
-    new Ingreso('salari0', 2100.00),
+    new Ingreso('salario', 2100.00),
     new Ingreso('Venta coche', 1500)
 ];
+
 
 const egresos = [
     new Egreso('Renta departamento', 900),
@@ -42,6 +43,6 @@ const formatoMoneda = (valor)=>{
     return valor.toLocaleString('en-US', {style:'currency', currency:'USD', minimumFractionDigits:2});
 }
 
-const formatoPorcentaje = ()=>{
+const formatoPorcentaje = (valor)=>{
     return valor.toLocaleString('en-US', {style:'percent', minimumFractionDigits:2})
 }
