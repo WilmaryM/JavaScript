@@ -1,3 +1,3 @@
-# Course of JavaScript
+# My course of JavaScript
 
-This is the course that I took to learn JavaScritp
+This is the course that I took to learn JavaScript, and it's awesome.
