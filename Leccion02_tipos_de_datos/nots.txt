@@ -106,14 +106,16 @@ x = 10, y = 20;
 let z = x + y;
 console.log(z); 30
 
-let  1nombreCompleto; incorrecto no esta permitido iniciar el nombre de una variable con numeros
+let  1nombreCompleto; 
+ incorrecto no esta permitido iniciar el nombre de una variable con numeros
 
 de esta manera se escriben las variales
 let _nombrre; correcto
 let $nombre; correcto
 let $1nombreCompleto; correcto
 
-Tambien en el caso de las funciones ya agregadas a javascript no pdemos usar sus nombres por que nos da error 
+Tambien en el caso de las funciones
+ ya agregadas a javascript no pdemos usar sus nombres por que nos da error 
 
 
 
